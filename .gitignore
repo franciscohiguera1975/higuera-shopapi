@@ -1,0 +1,108 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribución / empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Entorno virtual
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# Variables de entorno
+.env
+.env.*
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos estáticos y media
+staticfiles/
+media/
+
+# Migraciones (opcional, elimina esta línea si quieres versionarlas)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Archivos de tests y coverage
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm
+.idea/
+
+# Archivos temporales
+*.tmp
+*.bak
+
+# Docker
+*.pid
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Archivos de Gunicorn
+gunicorn.pid
+
+# Archivos de Sentry
+.sentry-native/
+
+# Archivos de configuración local
+*.local
+
+# Archivos compilados de frontend
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de cache
+__pypackages__/
