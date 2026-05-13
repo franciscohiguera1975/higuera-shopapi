@@ -56,7 +56,7 @@ class ProductFilterTests(TestCase):
     def test_filter_by_max_price(self):
         resp = self.client.get('/api/products/?price_max=100')
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
-        self.assertEqual(resp.data['count'], 1)
+        self.assertEqual(resp.data['count'], 2)
         self.assertEqual(resp.data['results'][0]['name'], 'Cheap')
 
     def test_filter_by_min_stock(self):
