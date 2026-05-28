@@ -82,6 +82,7 @@ class OrderViewSet(viewsets.ModelViewSet):
                 {'error': 'Cannot confirm an order with no items.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+        order.calculate_total()   # ← agregar esta línea
         order.status = 'confirmed'
         order.save(update_fields=['status'])
         return Response(OrderSerializer(order).data)

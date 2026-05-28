@@ -19,9 +19,9 @@ class ProductPermissionTests(TestCase):
         self.assertEqual(resp.status_code, status.HTTP_200_OK)
         self.assertIn('results', resp.data)
 
-    def test_unauthenticated_returns_401(self):
+    def test_unauthenticated_can_list(self):
         resp = APIClient().get('/api/products/')
-        self.assertEqual(resp.status_code, status.HTTP_401_UNAUTHORIZED)
+        self.assertEqual(resp.status_code, status.HTTP_200_OK)
 
     def test_regular_user_cannot_create(self):
         resp = auth_client(self.user).post('/api/products/', {

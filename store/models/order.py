@@ -26,9 +26,10 @@ class Order(models.Model):
         return f'Order #{self.id} — {self.user.username} ({self.status})'
 
     def calculate_total(self):
+        # Usar filter() en lugar de all() para bypassear el prefetch cache
         self.total = sum(
             item.unit_price * item.quantity
-            for item in self.items.all()
+            for item in self.items.filter()
         )
         self.save(update_fields=['total'])
 
